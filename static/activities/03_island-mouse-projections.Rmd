@@ -1,0 +1,171 @@
+---
+title: "Predicting the Future State of the Island Mouse"
+author: "SSA 200 - Activity 3"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(cowplot)
+library(shiny)
+library(DiagrammeR)
+```
+  
+## The Island Mouse  
+  
+The Island mouse *Zapus islandsonious* is a species that lives on Darlost's Island. There are 10 current populations, although historically they occurred at 11 sites across the island. As you covered in SSA 100, the mice face many threats due to climate change, human disturbance, and stochastic events. One of the most pressing threats is the expected decline in dune beetles due to sea level rise, as predicted under IPCC climate change models. Dune beetles are the main food source for Island Mice. Another stressor are volcanic eruptions that result in high noise levels that lead to cardiac arrest for the mice. Volcanic eruptions occur stochastically--the frequency of eruptions is not expected to change, but they are an important stressor that should be accounted for in projection models.  
+  
+The key threats to island mice as a species can be summed up with the following conceptual diagram:  
+   
+```{r}
+DiagrammeR::mermaid("
+graph LR
+A(Climate change) --> D(Sea level rise)
+D(Sea level rise) --> E(Dune beetle abundance)
+E(Dune beetle abundance) --> C[Island Mouse persistence]
+B(Volcanic eruptions) --> C[Island Mouse persistence]
+")
+```
+  
+  
+### Available data and current conditions  
+  
+First we'll take a look at the available data for island mouse populations to determine what kind of projection we can use. I've created a .csv file with all known abundance estimates for each species as well as the data source for those estimates.
+  
+```{r}
+dat = read_csv("static/activities/03_island-mouse-abundance.csv")
+head(dat)
+
+```
+
+```{r}
+dat <- dat %>% 
+  mutate(year =as.numeric(year))
+
+dat %>% 
+  select(population, ecoregion, data_source) %>% 
+  distinct()
+```
+  
+Here is the data we have for each population:  
+  
+```{r}
+ggplot(dat, aes(x = year, y = abundance, group = population, col = ecoregion)) +
+  geom_point(size = 2) +
+  geom_smooth(lty = 2, se = F) +
+  facet_wrap(~population, scales = "free") +
+  ylim(0, 500) +
+  scale_x_continuous(breaks = seq(1980, 2015, 10), limits = c(1980, 2015)) +
+  theme(axis.text.x = element_text(angle = 45, hjust =1.1),
+        strip.background = element_rect(fill = "white"),
+        strip.text = element_text(size = 10, margin = margin(1, 1, 1, 1))) +
+  scale_color_manual(values = c("#44AA99", 
+                                "#DDCC77",
+                                "#999933")) +
+  xlab("Year")
+```
+    
+We also know that these populations are linked in a metapopulation, with some sites acting as sources and some sinks. For the sake of simplicity for this exercise, however, we will ignore metapopulation dynamics. 
+    
+    
+### State transition model  
+  
+#### Current state  
+  
+With this data set it would be hard to estimate population trends across the same time frame for all populations. Instead, we can categorize populations as either "high abundance", "low abundance", or "locally extirpated" and estimate the probabilities of moving between those states. We'll use the somewhat arbritrary cutoff of 250 to make the distinction between high and low abundance.  
+  
+Based on this, let's look at  how many of the populations are in each state in 2015 (the most recent year with data). If we don't have data we'll put them in the "low abundance" state.    
+  
+```{r}
+dat <- dat %>% 
+  mutate(state = case_when(
+    abundance == 0 ~ "extirpated",
+    is.na(abundance) | abundance < 250 ~ "low",
+    abundance >= 250 ~ "high"
+  ))
+
+dat %>% 
+  filter(year == 2015) %>% 
+  count(state, ecoregion) %>% 
+  mutate(state = fct_relevel(state, "extirpated", "low", "high")) %>% 
+  ggplot(aes(x = state, y = n, fill = ecoregion)) +
+  geom_bar(stat = "identity", width = 0.5, position = "stack") +
+  xlab("State in 2015") +
+  ylab("Number of populations") +
+  scale_fill_manual(values = c("#44AA99", 
+                                "#DDCC77",
+                                "#999933")) +
+  theme(legend.position = "top")
+```
+  
+*Which of the 3Rs are conveyed by this figure? How?*  
+  
+  
+#### Project the future  
+  
+To project how many populations will be in each state at some arbitrary time point in the future, we first need to define the **transition matrix** of probabilities that will govern that process. 
+  
+The mantra for reading transition matrices is "*from the column, to the row*". The number in each cell is the probability of going **from** the *column number* state **to** the *row number* state. 
+  
+```{r}
+$$\left[\begin{array}
+A & B & C \\
+D & E & F \\
+G & H & I
+\end{array}\right]
+```
+  
+Here, `B` is the probability of going from state 2 to state 1. `I` is the probability of remainining in state 3.  
+  
+*Which letter represents the probability of going from state 3 to state 1?*  
+  
+*Describe what the letter D represents.*  
+  
+Often the probabilities in transition matrices will have subscripts or superscripts that also indicate which transition they represent.  
+  
+So, where do the numbers come from? They could be the outputs of an analysis, or from the literature, or from expert elicitation. We gathered the world's leading experts on island mice and used a formal elicitation process to determine the probabilities of moving between these states in a given year.    
+  
+Here is the transition matrix under baseline conditions:  
+1 = high abundance  
+2 = low abundance  
+3 = locally extirpated  
+   
+```{r}
+$$\left[\begin{array}
+0.6 & 0.44 & 0 \\
+0.35 & 0.55 & 0.05 \\
+0.05 & 0.01 & 0.95
+\end{array}\right]
+```
+
+The numbers in this matrix can tell us a lot about the dynamics of this system. A few things to notice:  
+  
+* Even if a population blinks out, there is a some chance that it will be recolonized. The probability of going from state 3 (extirpated) in year 1 to state 2 (low abundance) in year 2 is 0.05.  
+* Our experts agreed that even populations in the high abundance state have some probability of becoming extirpated. *What is that probability?*  
+* For all states, a given population is more likely to remain in its current state than transition to another one.  
+  
+
+
+
+
+  
+  
+ 
+
+### Demographic projections  
+  
+Until now we haven't explicitly modeled the demographic processes that link stressors to persistence/extinction for the Island Mice. This is often very difficult to do without a lot of data, and the state transition model above is a great way to make quantitative predictions when you mostly have qualitative data. However, we do have some more data that we can use to develop a demographic projection. Island Mice are very sensitive to loud noises, and volcanic eruptions cause higher death rates due to cardiac arrest among mice. Decreased dune beetle abundance is expected to have an effect mainly through decreasing the per capita birth rate, since pregnant and nursing female mice rely exclusively on dune beetles.  
+    
+```{r}
+DiagrammeR::mermaid("
+graph LR
+A(Climate change) --> D(Sea level rise)
+D(Sea level rise) --> E(Dune beetle abundance)
+E(Dune beetle abundance) --> G[birth rate]
+B(Volcanic eruptions) --> F[death rate]
+F[death rate] --> C[Island Mouse persistence]
+G[birth rate] --> C[Island Mouse persistence]
+")
+```
