@@ -1,0 +1,64 @@
+---
+title: "Lectures"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+--- 
+
+### Assessing historic and current conditions  
+  
+#### Intro to modeling for SSAs
+[lecture](static/lectures/01_intro-models.pdf)  
+[outline]  
+   
+   
+#### Qualitative data
+[lecture](static/lectures/02_qual-data.pdf)  
+  
+  
+  
+  
+#### Presence-type data
+[lecture](static/lectures/03_occ-data.pdf)  
+   
+   
+   
+#### Count data
+[lecture](static/lectures/04_count-data.pdf)  
+   
+   
+   
+#### Demographic data
+[lecture](static/lectures/05_demo-data.pdf)  
+   
+   
+   
+### Predicting future conditions  
+  
+#### Intro to projections and uncertainty
+[lecture](static/lectures/06_intro-projections.pdf)  
+   
+   
+   
+#### Occupancy projections
+[lecture](static/lectures/07_occ-projection.pdf)  
+   
+   
+   
+
+#### State transition models
+[lecture](static/lectures/08_multistate-projection.pdf)   
+   
+   
+   
+#### Count projections
+[lecture](static/lectures/09_count-projection.pdf)  
+    
+    
+    
+#### Matrix models for population demographics
+[lecture](static/lectures/10_demo-projection.pdf)    
+   
+   
+   

@@ -1,0 +1,169 @@
+population,ecoregion,year,abundance,data_source
+Beach Bums,coastal,1995,300,CMR
+Beach Bums,coastal,1996,350,CMR
+Beach Bums,coastal,1997,400,CMR
+Beach Bums,coastal,1998,425,CMR
+Beach Bums,coastal,1999,450,CMR
+Beach Bums,coastal,2000,,CMR
+Beach Bums,coastal,2001,,CMR
+Beach Bums,coastal,2002,100,CMR
+Beach Bums,coastal,2003,300,CMR
+Beach Bums,coastal,2004,400,CMR
+Beach Bums,coastal,2005,425,CMR
+Beach Bums,coastal,2006,,CMR
+Beach Bums,coastal,2007,,CMR
+Beach Bums,coastal,2008,,CMR
+Beach Bums,coastal,2009,,CMR
+Beach Bums,coastal,2010,,CMR
+Beach Bums,coastal,2011,,CMR
+Beach Bums,coastal,2012,450,CMR
+Beach Bums,coastal,2013,475,CMR
+Beach Bums,coastal,2014,500,CMR
+Beach Bums,coastal,2015,500,CMR
+Cannibal Cove,coastal,1995,200,CMR
+Cannibal Cove,coastal,1996,250,CMR
+Cannibal Cove,coastal,1997,300,CMR
+Cannibal Cove,coastal,1998,325,CMR
+Cannibal Cove,coastal,1999,350,CMR
+Cannibal Cove,coastal,2000,,CMR
+Cannibal Cove,coastal,2001,,CMR
+Cannibal Cove,coastal,2002,200,CMR
+Cannibal Cove,coastal,2003,325,CMR
+Cannibal Cove,coastal,2004,340,CMR
+Cannibal Cove,coastal,2005,390,CMR
+Cannibal Cove,coastal,2006,,CMR
+Cannibal Cove,coastal,2007,,CMR
+Cannibal Cove,coastal,2008,,CMR
+Cannibal Cove,coastal,2009,,CMR
+Cannibal Cove,coastal,2010,,CMR
+Cannibal Cove,coastal,2011,,CMR
+Cannibal Cove,coastal,2012,325,CMR
+Cannibal Cove,coastal,2013,400,CMR
+Cannibal Cove,coastal,2014,350,CMR
+Cannibal Cove,coastal,2015,400,CMR
+Castaways,coastal,2001,50,satellite imagery
+Castaways,coastal,2002,100,satellite imagery
+Castaways,coastal,2003,50,satellite imagery
+Castaways,coastal,2004,,satellite imagery
+Castaways,coastal,2005,,satellite imagery
+Castaways,coastal,2006,,satellite imagery
+Castaways,coastal,2007,,satellite imagery
+Castaways,coastal,2008,,satellite imagery
+Castaways,coastal,2009,,satellite imagery
+Castaways,coastal,2010,,satellite imagery
+Castaways,coastal,2011,,satellite imagery
+Castaways,coastal,2012,100,satellite imagery
+Castaways,coastal,2013,,satellite imagery
+Castaways,coastal,2014,,satellite imagery
+Castaways,coastal,2015,,satellite imagery
+Darlost's Dome,mountain,1979,120,counts
+Darlost's Dome,mountain,1982,120,counts
+Darlost's Dome,mountain,1985,120,counts
+Darlost's Dome,mountain,1988,120,counts
+Darlost's Dome,mountain,1991,125,counts
+Darlost's Dome,mountain,1994,120,counts
+Darlost's Dome,mountain,1997,120,counts
+Darlost's Dome,mountain,2000,122,counts
+Darlost's Dome,mountain,2003,115,counts
+Darlost's Dome,mountain,2006,110,counts
+Darlost's Dome,mountain,2009,110,counts
+Darlost's Dome,mountain,2012,101,counts
+Darlost's Dome,mountain,2015,101,counts
+Dead Man Dunes,palms,2001,200,CMR
+Dead Man Dunes,palms,2002,150,CMR
+Dead Man Dunes,palms,2003,150,CMR
+Dead Man Dunes,palms,2004,140,CMR
+Dead Man Dunes,palms,2005,130,CMR
+Dead Man Dunes,palms,2006,125,CMR
+Dead Man Dunes,palms,2007,,CMR
+Dead Man Dunes,palms,2008,,CMR
+Dead Man Dunes,palms,2009,,CMR
+Dead Man Dunes,palms,2010,,CMR
+Dead Man Dunes,palms,2011,110,CMR
+Dead Man Dunes,palms,2012,100,CMR
+Dead Man Dunes,palms,2013,,CMR
+Dead Man Dunes,palms,2014,90,CMR
+Dead Man Dunes,palms,2015,80,CMR
+Dead Man Dunes,palms,1970-1980,200,CMR
+Dead Man Dunes,palms,1981-1990,198,CMR
+Dead Man Dunes,palms,1990-2000,190,CMR
+Message in a Bottle,coastal,1865,500,harvest/anecdotal
+Message in a Bottle,coastal,1998,400,harvest/anecdotal
+Message in a Bottle,coastal,2003,300,harvest/anecdotal
+Message in a Bottle,coastal,2004,300,harvest/anecdotal
+Message in a Bottle,coastal,2005,300,harvest/anecdotal
+Message in a Bottle,coastal,2006,,harvest/anecdotal
+Message in a Bottle,coastal,2007,,harvest/anecdotal
+Message in a Bottle,coastal,2008,,harvest/anecdotal
+Message in a Bottle,coastal,2009,,harvest/anecdotal
+Message in a Bottle,coastal,2010,,harvest/anecdotal
+Message in a Bottle,coastal,2011,,harvest/anecdotal
+Message in a Bottle,coastal,2012,250,harvest/anecdotal
+Message in a Bottle,coastal,2013,250,harvest/anecdotal
+Message in a Bottle,coastal,2014,250,harvest/anecdotal
+Message in a Bottle,coastal,2015,300,harvest/anecdotal
+Message in a Bottle,coastal,1996,350,harvest/anecdotal
+Message in a Bottle,coastal,1997,400,harvest/anecdotal
+Message in a Bottle,coastal,1999,300,harvest/anecdotal
+Message in a Bottle,coastal,2000,,harvest/anecdotal
+Misty Mountain,mountain,2000,50,counts
+Misty Mountain,mountain,2001,,counts
+Misty Mountain,mountain,2002,,counts
+Misty Mountain,mountain,2003,,counts
+Misty Mountain,mountain,2004,,counts
+Misty Mountain,mountain,2005,,counts
+Misty Mountain,mountain,2006,,counts
+Misty Mountain,mountain,2007,,counts
+Misty Mountain,mountain,2008,,counts
+Misty Mountain,mountain,2009,,counts
+Misty Mountain,mountain,2010,,counts
+Misty Mountain,mountain,2011,,counts
+Misty Mountain,mountain,2012,,counts
+Misty Mountain,mountain,2013,,counts
+Misty Mountain,mountain,2014,,counts
+Misty Mountain,mountain,2015,,counts
+Realm of Spriits,palms,1995,250,anecdotal
+Realm of Spriits,palms,1996,250,anecdotal
+Realm of Spriits,palms,1997,245,anecdotal
+Realm of Spriits,palms,1998,250,anecdotal
+Realm of Spriits,palms,1999,250,anecdotal
+Realm of Spriits,palms,2000,,anecdotal
+Realm of Spriits,palms,2001,,anecdotal
+Realm of Spriits,palms,2002,200,anecdotal
+Realm of Spriits,palms,2003,250,anecdotal
+Realm of Spriits,palms,2004,250,anecdotal
+Realm of Spriits,palms,2005,250,anecdotal
+Realm of Spriits,palms,2006,,anecdotal
+Realm of Spriits,palms,2007,,anecdotal
+Realm of Spriits,palms,2008,,anecdotal
+Realm of Spriits,palms,2009,,anecdotal
+Realm of Spriits,palms,2010,,anecdotal
+Realm of Spriits,palms,2011,,anecdotal
+Realm of Spriits,palms,2012,250,anecdotal
+Realm of Spriits,palms,2013,250,anecdotal
+Realm of Spriits,palms,2014,250,anecdotal
+Realm of Spriits,palms,2015,250,anecdotal
+Skull Mountain,mountain,?,400,oral history
+Skull Mountain,mountain,2015,0,oral history
+Snowmelt Thicket,palms,2010,200,based on Dead Man Dunes
+Snowmelt Thicket,palms,2011,,based on Dead Man Dunes
+Snowmelt Thicket,palms,2012,,based on Dead Man Dunes
+Snowmelt Thicket,palms,2013,,based on Dead Man Dunes
+Snowmelt Thicket,palms,2014,,based on Dead Man Dunes
+Snowmelt Thicket,palms,2015,,based on Dead Man Dunes
+Treasure Grove,palms,2001,,anecdotal
+Treasure Grove,palms,2002,,anecdotal
+Treasure Grove,palms,2003,,anecdotal
+Treasure Grove,palms,2004,,anecdotal
+Treasure Grove,palms,2005,,anecdotal
+Treasure Grove,palms,2006,,anecdotal
+Treasure Grove,palms,2007,,anecdotal
+Treasure Grove,palms,2008,,anecdotal
+Treasure Grove,palms,2009,,anecdotal
+Treasure Grove,palms,2010,,anecdotal
+Treasure Grove,palms,2011,,anecdotal
+Treasure Grove,palms,2012,,anecdotal
+Treasure Grove,palms,2013,,anecdotal
+Treasure Grove,palms,2014,,anecdotal
+Treasure Grove,palms,2015,,anecdotal
+Treasure Grove,palms,2000,100,anecdotal

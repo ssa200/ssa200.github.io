@@ -1,0 +1,56 @@
+---
+title: "Upcoming course offerings"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+  
+---
+  
+### Oct 23-24, 2018 - Houston TX  
+  
+__Dates & Location__   
+October 23-24, 2018; 8 am to 5 pm   
+Texas Parks and Wildlife Department’s Region IV HQ  
+Conference Room  
+14200 Garrett Rd. Houston, TX   
+Next to Sheldon Lake State Park.  
+  
+__Local Contact__  
+[Nathan Allan](mailto:Nathan_Allan@fws.gov)  
+512-490-0057 ext. 237  
+  
+__Who Should Attend__  
+Fish and Wildlife Service biologists involved in conducting SSAs.  
+  
+__Length__  
+2 days, 8 am to 5 pm each day  
+  
+__College Credit__  
+Not applicable.  
+  
+__Tuition__  
+There is no tuition.  
+  
+__To Register__  
+Email the local contact of the class and request a place in the course.  
+  
+__Availability__  
+Limited to 35 participants.  
+  
+__Suggested Accommodations__  
+[Staybridge Suites Houston Humble](https://tinyurl.com/ybzr8rpn)   
+4819 Canyon Lakes Trace Drive   
+Humble, Texas  
+1-832-230-1401  
+Fed Rate $121  
+Use link to make reservation by Oct. 1.  
+Free shuttle to GBI Airport.  
+   
+   
+---
+   
+### Dec 2018 - FIT Summit  
+  
+_Details coming soon_  

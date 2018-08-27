@@ -1,0 +1,16 @@
+---
+title: "Useful links and materials"
+---
+  
+  
+__General__  
+  
+[Best practices for spreadsheets](static/handouts/Broman-Woo-2018.pdf)
+  
+[Guide to statistical distributions](static/handouts/distributions.pdf)  
+  
+  
+__Species Distribution Models__  
+  
+[SDMs for Conservation Educators and Practioners](static/handouts/SDMs-for-educators-and-practitioners.pdf)
+  

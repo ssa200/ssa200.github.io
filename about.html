@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Questions and Answers</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/simplex.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 41px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 46px;
+  margin-top: -46px;
+}
+
+.section h2 {
+  padding-top: 46px;
+  margin-top: -46px;
+}
+.section h3 {
+  padding-top: 46px;
+  margin-top: -46px;
+}
+.section h4 {
+  padding-top: 46px;
+  margin-top: -46px;
+}
+.section h5 {
+  padding-top: 46px;
+  margin-top: -46px;
+}
+.section h6 {
+  padding-top: 46px;
+  margin-top: -46px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img id="logo" style="width: 100px;" src="static/img/unit-logo.png" /></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">SSA 200 Home</a>
+</li>
+<li>
+  <a href="about.html">About the course</a>
+</li>
+<li>
+  <a href="scheduled.html">Upcoming offerings</a>
+</li>
+<li>
+  <a href="instructors.html">Instructors</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lectures.html">Lectures</a>
+    </li>
+    <li>
+      <a href="activities.html">Activities</a>
+    </li>
+    <li>
+      <a href="handouts.html">Handouts and Cheat Sheets</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Questions and Answers</h1>
+
+</div>
+
+
+<p><em>Who is this course for?</em><br />
+The material in this class is aimed at SSA practitioners, i.e. biologists who are involved in conducting SSAs for the Fish and Wildlife Service; particularly those who anticipate being involved in SSAs where rule sets and population models are appropriate to develop or where existing frameworks might be incorporated into the SSA.</p>
+<p><em>Who are the instructors?</em><br />
+Dr. Conor McGowan, U.S. Geological Survey, Acting Unit Leader<br />
+Dr. Nicole F. Angeli, Post-doctoral Fellow<br />
+Anna Tucker, doctoral student<br />
+All from the Alabama Cooperative Fish and Wildlife Research Unit, School of Forestry and Wildlife Sciences, Auburn University.</p>
+<p><em>Will I learn how to build population models?</em><br />
+No. This is a course to help you know what you don’t know by understanding the different types of population models, their applications and limitations, and the terminology and basic structure of different models in published literature, reports, and conversation. For an introductory course on direct modeling, check out NCTC’s <em>Modeling for Endangered Species Management</em>, CSP2304; next offering is October 29-November 2, 2018.</p>
+<p><em>Is this an NCTC-sanctioned training course?</em><br />
+No, not yet, but we’re working on it. The course format will be structured and formal, like an NCTC course, but we have not made this an NCTC course. We might do that in the future, but this is the pilot offering, and we want to see how the course is received.</p>
+<p><em>What’s the difference in the SSA 200 course and the Modeling for Endangered Species Management course?</em><br />
+The <em>Modeling for Endangered Species Management</em> course by NCTC is intended to teach biologists how to build population models. Our SSA 200 is an overview of the basics of population modeling so you can communicate better with modelers and better understand when to apply a model. We recommend the Modeling for Endangered Species Management course if you are planning to actually create population models. The SSA 200 course is aimed at everyone else who is involved in SSAs and needs to have a basic knowledge about population models.</p>
+<p><em>Who’s paying for this?</em><br />
+There is no tuition for the course. The course development and the instructors’ travel have been paid by FWS, Region 2, Ecological Services. Travel costs for students participating in the course will need to be paid by their home office.</p>
+<p><em>Is this course only for Region 2?</em><br />
+This inaugural offering of the course is aimed at biologists in Region 2 where the course development was initially funded. However, we will also invite a limited number of representatives from other Regions that might be interested in taking the course back to their regions and who might serve as instructors in future course offerings in other Regions.</p>
+<p><em>Will there be other opportunities to take the course?</em><br />
+Presumably yes, but other courses have not yet been scheduled. We are anticipating offering the course for the national Species Assessment Team (RO/HQ Listing people) and SSA Framework Implementation Team. Future course offerings will depend on the interest from other Regions and the availability of qualified instructors to lead the course.</p>
+<p><em>Do I need to have taken the Introduction to Species Status Assessment course from NCTC before taking this course?</em><br />
+Yes, it would be best if students had already taken the Intro to SSA course before this course. Exceptions could be made for students who have not taken the Intro to SSA course but have experience in conducting SSAs.</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

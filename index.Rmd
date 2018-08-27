@@ -1,0 +1,28 @@
+---
+title: "SSA 200: Strategic Use of Data"
+subtitle: "Describing population trends for Species Status Assessments"
+---
+  
+__Course Description__   
+This is a second course in the Species Status Assessment (SSA)
+instructional series to understand the basics of models to inform and
+enhance species status assessments under the Endangered Species Act. The
+purpose is to help students become comfortable assessing available data,
+predicting outcomes from mathematical trends, and communicating
+uncertainty related to those trends to a broader audience.  
+  
+On day one, we will discuss statistical methods to evaluate the historical
+and current state of a species, including identifying the data types available
+and interpreting tables and figures in the scientific literature. On the
+second day, we will discuss projection models to predict the future
+population trends of species across alternative scenarios and how to
+communicate assumptions and outcomes effectively.
+  
+__Course Objectives__  
+Upon completion of this course, you will be able to:  
+  
+* Become familiar with common terminology and approaches used in
+population modeling including constraints, weaknesses, and underlying assumptions.  
+* Identify an appropriate analytical approach for assessing the status of a species given the available data.  
+* Communicate/understand relevant analytics and interpret population modeling results pertinent to an SSA.  
+* Communicate population modeling results to decision makers as part of SSA results.

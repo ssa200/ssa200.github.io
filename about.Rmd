@@ -1,0 +1,37 @@
+---
+title: "Questions and Answers"
+---
+  
+_Who is this course for?_  
+The material in this class is aimed at SSA practitioners, i.e. biologists who are
+involved in conducting SSAs for the Fish and Wildlife Service; particularly those who anticipate being involved in SSAs where rule sets and population models are appropriate to develop or where existing frameworks might be incorporated into the SSA.  
+  
+_Who are the instructors?_  
+Dr. Conor McGowan, U.S. Geological Survey, Acting Unit Leader  
+Dr. Nicole F. Angeli, Post-doctoral Fellow  
+Anna Tucker, doctoral student  
+All from the Alabama Cooperative Fish and Wildlife Research Unit, School of Forestry and Wildlife Sciences, Auburn University.  
+  
+_Will I learn how to build population models?_  
+No. This is a course to help you know what you don't know by understanding the different types of population models, their applications and limitations, and
+the terminology and basic structure of different models in published literature, reports, and conversation. For an introductory course on direct modeling, check out NCTC's _Modeling for Endangered Species Management_, CSP2304; next offering is October 29-November 2, 2018.  
+
+_Is this an NCTC-sanctioned training course?_  
+No, not yet, but we're working on it. The course format will be structured and formal, like an NCTC course, but we have not made this an NCTC course. We might do that in the future, but this is the pilot offering, and we want to see how the course is received.  
+  
+_What's the difference in the SSA 200 course and the Modeling for Endangered Species Management course?_   
+The _Modeling for Endangered Species Management_ course by NCTC is intended to teach
+biologists how to build population models. Our SSA 200 is an overview of the basics of population modeling so you can communicate better with modelers and better understand when to apply a model. We recommend the Modeling for Endangered Species Management course if you are planning to actually create population models. The SSA 200 course is aimed at everyone else who is involved in SSAs and needs to have a basic knowledge about population models.  
+  
+_Who's paying for this?_  
+There is no tuition for the course. The course development and the instructors'
+travel have been paid by FWS, Region 2, Ecological Services. Travel costs for students participating in the course will need to be paid by their home office.  
+  
+_Is this course only for Region 2?_  
+This inaugural offering of the course is aimed at biologists in Region 2 where the course development was initially funded. However, we will also invite a limited number of representatives from other Regions that might be interested in taking the course back to their regions and who might serve as instructors in future course offerings in other Regions.  
+  
+_Will there be other opportunities to take the course?_  
+Presumably yes, but other courses have not yet been scheduled. We are anticipating offering the course for the national Species Assessment Team (RO/HQ Listing people) and SSA Framework Implementation Team. Future course offerings will depend on the interest from other Regions and the availability of qualified instructors to lead the course.  
+  
+_Do I need to have taken the Introduction to Species Status Assessment course from NCTC before taking this course?_  
+Yes, it would be best if students had already taken the Intro to SSA course before this course. Exceptions could be made for students who have not taken the Intro to SSA course but have experience in conducting SSAs.

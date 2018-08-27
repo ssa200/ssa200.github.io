@@ -1,0 +1,25 @@
+name: "ssa-200-website"
+output_dir: "."
+navbar:
+  title: "<img id=\"logo\" style=\"width: 100px;\" src=\"static/img/unit-logo.png\" />"
+  right:
+   - text: "SSA 200 Home"
+     href: index.html
+   - text: "About the course"
+     href: about.html
+   - text: "Upcoming offerings"
+     href: scheduled.html
+   - text: "Instructors"
+     href: instructors.html
+   - text: "Resources"
+     menu:
+      - text: "Lectures"
+        href: lectures.html
+      - text: "Activities"
+        href: activities.html
+      - text: "Handouts and Cheat Sheets"
+        href: handouts.html
+output:
+  html_document:
+    theme: simplex
+    css: style.css
