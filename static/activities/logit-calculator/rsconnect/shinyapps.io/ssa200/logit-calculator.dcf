@@ -1,0 +1,12 @@
+name: logit-calculator
+title: logit-calculator
+username:
+account: ssa200
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 478569
+bundleId: 1617050
+url: https://ssa200.shinyapps.io/logit-calculator/
+when: 1538435669.42488
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,16 @@
+---
+output: html_document
+---
+
+This calculator uses the logit equation to calculate the predicted probability of Islad Mouse occurrence based on three ecological covariates that have been shown to be strongly associated with the presence of Island Mice.  
+  
+This is what is going on "under the hood":
+
+$$
+Pr(occ) = \frac{exp(\beta_0 + \beta_1*x_1 + \beta_2*x_2 + \beta_3x_3)} 
+{1 + exp(\beta_0 + \beta_1*x_1 + \beta_2*x_2 + \beta_3x_3)} 
+$$  
+  
+
+
+
