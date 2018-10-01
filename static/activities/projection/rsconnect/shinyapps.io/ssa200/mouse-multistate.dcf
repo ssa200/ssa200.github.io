@@ -1,0 +1,12 @@
+name: mouse-multistate
+title: mouse-multistate
+username:
+account: ssa200
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 483159
+bundleId: 1616912
+url: https://ssa200.shinyapps.io/mouse-multistate/
+when: 1538429153.48576
+asMultiple: FALSE
+asStatic: FALSE

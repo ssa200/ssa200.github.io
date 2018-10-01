@@ -27,12 +27,21 @@ nyrs = 15
 
 env = F
 
+# t[2,3], t[1,3], t[1,2] +
+b_noise = 1.5
+
+# t[3,3], t[3,2]  -
+b_temp = -1.8
+
+noise = 2
+temp = 0
+
 # setup simulation
 pops = 11
 ecotype = c(rep("Coastal", 4), rep("Mountain", 3), rep("Palms", 4))
 
-all.means = matrix(c(0.6, 0.3, 0.05,
-                   0.4, 0.5, 0.2,
+all.means = matrix(c(0.9, 0.3, 0.05,
+                   0.1, 0.5, 0.2,
                    0, 0.2, 0.75), nrow = 3, ncol = 3, byrow = T)
 all.sd = matrix(c(0.05, 0.1, 0.02,
               0.08, 0.05, 0.04,
@@ -62,10 +71,22 @@ tp = array(NA, dim = c(reps, nyrs, 3, 3))
 for(r in 1:reps){
   for(i in 1:3){
     for(t in 1:3){
+      
       tp[r,,i,t] = ifelse(env, get_beta_vals(n = nyrs,
                                       mean = t.m[r,i,t],
                                       sd = t.sd[r,i,t]),
                           t.m[r,i,t])
+      
+      # effect of noise
+      if(i == 1 && t == 2 | i == 1 && t == 3 | i == 2 && t == 3){
+        tp[r,,i,t] = plogis(qlogis(tp[r,,i,t]) + b_noise*noise)
+      }
+      
+      # effect of temp range
+      if(i == 3 && t == 2 | i == 3 && t == 3){
+        tp[r,,i,t] = plogis(qlogis(tp[r,,i,t]) + b_temp*temp)
+      }
+      
     }
   }
 }
@@ -101,61 +122,91 @@ res <- res %>%
   mutate(ecotype = ecotype[pop],
          state = c(state))
 
-# plot proportion in each state over time
+# plot number in each state over time
+
+res %>% 
+  group_by(rep, year) %>% 
+  count(state) %>% 
+  ungroup() %>% 
+  group_by(year, state) %>% 
+  summarize(mprop = median(n),
+            lcl = quantile(n, probs = 0.025),
+            ucl = quantile(n, probs = 0.975)) %>% 
+  ungroup() %>% 
+  complete(year, state, fill = list(mprop = 0)) %>% 
+  mutate(state = factor(c("Extirpated", "Low", "High")[state],
+                        levels = c("Extirpated", "Low", "High"))) %>% 
+  ggplot(aes(x = year, col = state, fill = state)) +
+  #geom_linerange(aes(ymin = lcl, ymax = ucl), alpha= 0.9) +
+  geom_line(aes(y = lcl), lty = 2, lwd = 1) +
+  geom_line(aes(y = ucl), lty = 2, lwd = 1) +
+  geom_line(aes(y = mprop), lwd = 1.5) +
+  facet_grid(~state, scales= "free") +
+  scale_fill_viridis_d(end = 0.7, name = "State") +
+  scale_color_viridis_d(end = 0.7, name = "State") +
+  scale_x_continuous(breaks = seq(0, nyrs, 2)) +
+  theme(legend.position = "none",
+        strip.background = element_rect(fill = "white")) +
+  xlab("Year") +
+  ylab("Number of populations in each state (11 total)") +
+  annotate("segment", x=-Inf, xend=Inf, y=-Inf, yend=-Inf)+
+  annotate("segment", x=-Inf, xend=-Inf, y=-Inf, yend=Inf)
+
+
+# number in final state by ecotype
+
 res %>% 
   group_by(rep, year, ecotype) %>% 
   count(state) %>% 
-  mutate(prop = n/sum(n)) %>% 
   ungroup() %>% 
   group_by(year, ecotype, state) %>% 
-  summarize(mprop = median(prop),
-            lcl = quantile(prop, probs = 0.025),
-            ucl = quantile(prop, probs = 0.975)) %>% 
+  summarize(mprop = median(n),
+            lcl = quantile(n, probs = 0.025),
+            ucl = quantile(n, probs = 0.975)) %>% 
   ungroup() %>% 
   complete(year, ecotype, state, fill = list(mprop = 0)) %>% 
+  filter(year == nyrs) %>% 
   mutate(state = factor(c("Extirpated", "Low", "High")[state],
-                        levels = c("Extirpated", "Low", "High"))) %>% 
-  ggplot(aes(x = year, col = state, fill = state)) +
-  geom_linerange(aes(ymin = lcl, ymax = ucl), alpha= 0.9) +
-  geom_line(aes(y = mprop), lwd = 1.5) +
-  facet_grid(state~ecotype, scales= "free") +
-  ylim(0,1) +
+                        levels = c("Extirpated", "Low", "High")),
+         ecotype = c("Coastal" = "Coastal (4 total)",
+                     "Mountain" = "Mountain (3 total)",
+                     "Palms" = "Paradise Palms (4 total)")[ecotype]) %>% 
+  ggplot(aes(x = state, y = mprop, col= state, fill = state)) +
+  geom_bar(stat = "identity", alpha = 0.5, width = 0.75) +
+  geom_linerange(aes(ymin = lcl, ymax = ucl), lwd = 1.5) +
   scale_fill_viridis_d(end = 0.7, name = "State") +
   scale_color_viridis_d(end = 0.7, name = "State") +
-  scale_x_continuous(breaks = seq(0, nyrs, 2)) +
-  theme(legend.position = "none",
-        strip.background = element_rect(fill = "white")) +
-  xlab("Year") +
-  ylab("Proportion of populations in each state") +
-  annotate("segment", x=-Inf, xend=Inf, y=-Inf, yend=-Inf)+
-  annotate("segment", x=-Inf, xend=-Inf, y=-Inf, yend=Inf)
+  theme(strip.background = element_rect(fill = "white"),
+        legend.position = "none") +
+  xlab("Population state in final year") +
+  ylab("Number of populations") +
+  facet_wrap(~ecotype)
 
 
+# prop at least one high
+res %>% 
+  filter(year == nyrs) %>% 
+  group_by(rep, ecotype) %>% 
+  summarize(h = ifelse(3 %in% state,1, 0)) %>% 
+  ungroup() %>% 
+  group_by(rep) %>% 
+  summarize(hs = ifelse(sum(h) == 3, 1, 0)) %>% 
+  pull(hs) %>% 
+  mean()
+
+
+# extinction probs
+res %>% 
+  filter(year == nyrs) %>% 
+  group_by(rep, ecotype) %>% 
+  summarize(h = ifelse(all(state == 1), 1, 0)) %>%
+  ungroup() %>% 
+  group_by(ecotype) %>% 
+  summarize(pext = mean(h))
 
 res %>% 
-  group_by(year, pop) %>% 
-  count(state) %>% 
-  mutate(prop = n/sum(n)) %>% 
+  filter(year == nyrs) %>% 
+  group_by(rep) %>% 
+  summarize(h = ifelse(all(state == 1), 1, 0)) %>%
   ungroup() %>% 
-  group_by(year, pop, state) %>% 
-  summarize(mprop = median(prop),
-            lcl = quantile(prop, probs = 0.025),
-            ucl = quantile(prop, probs = 0.975)) %>% 
-  ungroup() %>% 
-  complete(year, pop, state, fill = list(mprop = 0)) %>% 
-  mutate(state = factor(c("Extirpated", "Low", "High")[state],
-                        levels = c("Extirpated", "Low", "High"))) %>% 
-  ggplot(aes(x = year, col = state, fill = state)) +
-  geom_linerange(aes(ymin = lcl, ymax = ucl), alpha= 0.9) +
-  geom_line(aes(y = mprop), lwd = 1.5) +
-  facet_grid(state~ecotype, scales= "free") +
-  ylim(0,1) +
-  scale_fill_viridis_d(end = 0.7, name = "State") +
-  scale_color_viridis_d(end = 0.7, name = "State") +
-  scale_x_continuous(breaks = seq(0, nyrs, 2)) +
-  theme(legend.position = "none",
-        strip.background = element_rect(fill = "white")) +
-  xlab("Year") +
-  ylab("Proportion of populations in each state") +
-  annotate("segment", x=-Inf, xend=Inf, y=-Inf, yend=-Inf)+
-  annotate("segment", x=-Inf, xend=-Inf, y=-Inf, yend=Inf)
+  summarize(pext = mean(h))

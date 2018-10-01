@@ -1,0 +1,38 @@
+---
+output: html_document
+---
+
+##### Island Mouse multistate occupancy model
+
+The Island Mouse (*Zapus islandsonious*) is a species that is adapted to the unique ecology of Darlost’s Island and thrive in mild, warm temperatures and need peaceful quiet beaches for successful breeding.  
+   
+There are 11 populations of Island Mice across the island, and they fall into three ecoregions: Coastal, Mountains, and Paradise Palms. We developed a multistate model to estimate the resiliency, redundancy, and representation of Island Mice under various future conditions.  
+  
+The model is based on estimated probabilities of transitioning between a low abundance, high abundance, or extirpated state for each population:   
+  
+```{r, out.width = "500px", echo = F, fig.align='center'}
+knitr::include_graphics("activity3-diagram.png")
+```
+  
+  
+  
+The baseline transition probabilities are:  
+  
+$$\left[\begin{array}
+{ccc}
+T^{EE} & T^{LE} & T^{HE} \\
+T^{EL} & T^{LL} & T^{HL} \\
+T^{EH} & T^{LH} & T^{HH}
+\end{array}\right] = 
+\left[\begin{array}
+{ccc}
+0.9±0.05 & 0.3±0.1 & 0.05±0.02 \\
+0.1±0.08 & 0.5±0.05 & 0.2±0.04 \\
+0 & 0.2±0.09 & 0.75±0.05
+\end{array}\right]
+ $$
+  
+Three transition probabilities are strongly associated with **ambient noise level**. $T^{HL}$, $T^{HE}$, and $T^{LE}$ all increased as ambient noise level increased ($\beta$ = 1.5 ± 0.03, p = 0.001). 
+  
+Two transition probabilities are strongly associated with **annual temperature range**. $T^{HH}$ and $T^{LH}$ both decreased as temperature range increased ($\beta$ = -1.8 ± 0.41, p = 0.0023). 
+
