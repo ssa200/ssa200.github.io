@@ -8,31 +8,38 @@ output:
 
 ### Assessing historic and current conditions  
   
-#### Activity 1: Understanding and organizing data inputs  
-In this activity we will review how to assess a data set, understand the type of data and potential limitations, and format it for analysis.  
-[pdf](static/activities/01_data-inputs.pdf)  
-
+  
+#### Activity 1: Hypothesis-based model development  
+In this activity we will bridge the gap from conceptual models to mathematical models, and build candidate model sets based on ecological hypothesis.  
+  
+[activity handout](static/activities/01_model-sets.docx)  
+  
 ---
   
    
 #### Activity 2: Interpreting model outputs  
-In this activity we look at a variety of model outputs including R output and tables and figures from the literature. 
-[pdf](static/activities/02_model-outputs.pdf)  
-
+In this activity we will interpret model outputs, including model selection using AIC and regression coefficients. We will also look at using model outputs to make predictions.  
+  
+[activity handout](static/activities/02_model-outputs.docx)  
+[logit calculator app](https://ssa200.shinyapps.io/logit-calculator/)
+  
 ---
+  
   
   
 ### Predicting future conditions  
   
 #### Activity 3: Stochastic projections  
 Here you will use a web application (linked below) to project the future state of the Island Mouse under a variety of scenarios. We will practice interpreting stochastic projections and communicating uncertainty to decision makers.  
-[pdf](static/activities/03_stochastic-projections.pdf)  
-[web application](https://ssa200.shinyapps.io/stochastic-projections/)  
-
+  
+[activity handout](static/activities/03_projections.docx)  
+[multistate projection app](https://ssa200.shinyapps.io/mouse-multistate/)  
+  
 ---
    
    
 #### Activity 4: Data analysis plan   
-For the final activity, you will assess a collection of data sets and develop a holistic analysis plan for this hypothetical SSA, including the type of analysis that should be used and the type of projection model, and describe the outputs you would use in the SSA for this species.  
-[pdf](static/activities/04_analysis.plan.pdf)  
-*links to data sets*
+For the final activity, you will assess a collection of data sets and develop a holistic analysis plan for this hypothetical SSA, including the type of analysis that should be used and the type of projection model, and describe the outputs you would use in the SSA for this species.   
+   
+[activity handout](static/activities/04_analysis-plan.docx)  
+[data sets](static/activities/04_data-sets.xlsx)

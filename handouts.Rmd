@@ -5,9 +5,12 @@ title: "Useful links and materials"
   
 __General__  
   
+[Data analysis roadmap](static/handouts/analysis-roadmap.pdf)
+  
 [Best practices for spreadsheets](static/handouts/Broman-Woo-2018.pdf)
   
-[Guide to statistical distributions](static/handouts/distributions.pdf)  
+[Guide to statistical distributions](static/handouts/distributions.pdf) 
+  
   
   
 __Species Distribution Models__  
