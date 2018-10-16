@@ -2,6 +2,13 @@
 title: "Useful links and materials"
 ---
   
+__Species Status Assessments__  
+  
+[SSA process overview](static/handouts/Smith_etal_2018_SSA.pdf)  
+  
+[Sonoran desert tortoise SSA case study](McGowan_etal_2017_SDTSSA.pdf)
+  
+
   
 __General__  
   
