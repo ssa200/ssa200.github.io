@@ -33,8 +33,9 @@ b_noise = 1.5
 # t[3,3], t[3,2]  -
 b_temp = -1.8
 
+# input future noise and temp
 noise = 2
-temp = 0
+temp = 0.5
 
 # setup simulation
 pops = 11
@@ -210,3 +211,75 @@ res %>%
   summarize(h = ifelse(all(state == 1), 1, 0)) %>%
   ungroup() %>% 
   summarize(pext = mean(h))
+
+
+#### compare scenarios
+all_res <- res1 %>% 
+  bind_rows(res2) %>% 
+  bind_rows(res3)
+
+
+all_res %>% 
+  group_by(rep, year, scenario) %>% 
+  count(state) %>% 
+  ungroup() %>% 
+  group_by(year, state, scenario) %>% 
+  summarize(mprop = median(n),
+            lcl = quantile(n, probs = 0.025),
+            ucl = quantile(n, probs = 0.975)) %>% 
+  ungroup() %>% 
+  complete(year, state, scenario, fill = list(mprop = 0)) %>% 
+  mutate(state = factor(c("Extirpated", "Low", "High")[state],
+                        levels = c("Extirpated", "Low", "High")),
+         scenario = factor(c("Status quo", "Noise reduction", "Noise increase")[scenario],
+                           levels = c("Status quo", "Noise reduction", "Noise increase"))) %>% 
+  ggplot(aes(x = year, col = scenario, fill = scenario)) +
+  #geom_linerange(aes(ymin = lcl, ymax = ucl), alpha= 0.9) +
+  geom_line(aes(y = lcl), lty = 2, lwd = 1) +
+  geom_line(aes(y = ucl), lty = 2, lwd = 1) +
+  geom_line(aes(y = mprop), lwd = 1.5) +
+  facet_grid(~state, scales= "free") +
+  scale_fill_viridis_d(end = 0.8, name = "Scenario", direction = -1) +
+  scale_color_viridis_d(end = 0.8, name = "Scenario", direction = -1) +
+  scale_x_continuous(breaks = seq(0, nyrs, 2)) +
+  theme(legend.position = "top",
+        strip.background = element_rect(fill = "white"),
+        strip.text = element_text(margin = margin(1,1,1,1), size = 14)) +
+  xlab("Year") +
+  ylab("Number of populations in each state (11 total)") +
+  annotate("segment", x=-Inf, xend=Inf, y=-Inf, yend=-Inf)+
+  annotate("segment", x=-Inf, xend=-Inf, y=-Inf, yend=Inf)
+
+
+
+all_res %>% 
+  group_by(rep, year, ecotype, scenario) %>% 
+  count(state) %>% 
+  ungroup() %>% 
+  group_by(year, ecotype, state, scenario) %>% 
+  summarize(mprop = median(n),
+            lcl = quantile(n, probs = 0.025),
+            ucl = quantile(n, probs = 0.975)) %>% 
+  ungroup() %>% 
+  complete(year, ecotype, state, scenario, fill = list(mprop = 0)) %>% 
+  filter(year == nyrs) %>% 
+  mutate(state = factor(c("Extirpated", "Low", "High")[state],
+                        levels = c("Extirpated", "Low", "High")),
+         ecotype = c("Coastal" = "Coastal (4 total)",
+                     "Mountain" = "Mountain (3 total)",
+                     "Palms" = "Paradise Palms (4 total)")[ecotype],
+         scenario = factor(c("Status quo", "Noise reduction", "Noise increase")[scenario],
+                           levels = c("Status quo", "Noise reduction", "Noise increase"))) %>% 
+  ggplot(aes(x = state, y = mprop, col= scenario, fill = scenario)) +
+  geom_bar(stat = "identity", alpha = 0.5, width = 0.75, 
+           position = position_dodge(width = 0.75)) +
+  geom_linerange(aes(ymin = lcl, ymax = ucl), lwd = 1.5,
+                 position = position_dodge(width = 0.75)) +
+  scale_fill_viridis_d(end = 0.8, name = "Scenario", direction = -1) +
+  scale_color_viridis_d(end = 0.8, name = "Scenario", direction = -1) +
+  theme(strip.background = element_rect(fill = "white"),
+        legend.position = "top",
+        strip.text = element_text(margin = margin(1,1,1,1), size = 14)) +
+  xlab("Population state in final year") +
+  ylab("Number of populations") +
+  facet_wrap(~ecotype)
