@@ -8,57 +8,67 @@ output:
 
 ### Assessing historic and current conditions  
   
-#### Intro to modeling for SSAs
-[lecture](static/lectures/01_intro-models.pdf)  
-[outline]  
+#### Intro to modeling for SSAs  
+  
+[lecture slides](static/lectures/ssa200_01_intro-models.pdf)  
+
    
-   
-#### Qualitative data
-[lecture](static/lectures/02_qual-data.pdf)  
+#### Qualitative data  
+  
+[lecture slides](static/lectures/ssa200_02_qual-data.pdf)  
   
   
   
   
-#### Presence-type data
-[lecture](static/lectures/03_occ-data.pdf)  
+#### Presence-type data  
+  
+[lecture slides](static/lectures/ssa200_03_occ-data.pdf)  
    
    
    
-#### Count data
-[lecture](static/lectures/04_count-data.pdf)  
+#### Count data  
+  
+[lecture slides](static/lectures/ssa200_04_count-data.pdf)  
    
    
    
-#### Demographic data
-[lecture](static/lectures/05_demo-data.pdf)  
+#### Demographic data  
+  
+[lecture slides](static/lectures/ssa200_05_demo-data.pdf)  
    
    
    
 ### Predicting future conditions  
   
-#### Intro to projections and uncertainty
-[lecture](static/lectures/06_intro-projections.pdf)  
+  
+#### Intro to projections and uncertainty  
+  
+[lecture slides](static/lectures/ssa200_06_intro-projections.pdf)  
    
    
    
-#### Occupancy projections
-[lecture](static/lectures/07_occ-projection.pdf)  
+#### Occupancy projections  
+  
+[lecture slides](static/lectures/ssa200_07_occ-projection.pdf)  
    
    
    
 
-#### State transition models
-[lecture](static/lectures/08_multistate-projection.pdf)   
+#### State transition models  
+  
+[lecture slides](static/lectures/ssa200_08_multistate-projection.pdf)   
    
    
    
-#### Count projections
-[lecture](static/lectures/09_count-projection.pdf)  
+#### Count projections  
+  
+[lecture slides](static/lectures/ssa200_09_count-projection.pdf)  
     
     
     
-#### Matrix models for population demographics
-[lecture](static/lectures/10_demo-projection.pdf)    
+#### Matrix models for population demographics  
+  
+[lecture slides](static/lectures/ssa200_10_demo-projection.pdf)    
    
    
    
