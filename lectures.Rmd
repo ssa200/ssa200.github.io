@@ -1,74 +1,33 @@
 ---
 title: "Lectures"
 output:
-  html_document:
-    toc: true
-    toc_float: true
+  html_document
 --- 
 
-### Assessing historic and current conditions  
+__Assessing historic and current conditions__  
   
-#### Intro to modeling for SSAs  
+[Intro to modeling for SSAs](static/lectures/ssa200_01_intro-models.pdf)  
   
-[lecture slides](static/lectures/ssa200_01_intro-models.pdf)  
-
+[Qualitative data](static/lectures/ssa200_02_qual-data.pdf)  
    
-#### Qualitative data  
+[Presence-type data](static/lectures/ssa200_03_occ-data.pdf)  
+   
+[Count data](static/lectures/ssa200_04_count-data.pdf)  
   
-[lecture slides](static/lectures/ssa200_02_qual-data.pdf)  
+[Demographic data](static/lectures/ssa200_05_demo-data.pdf)  
+   
+   
+__Predicting future conditions__  
   
+[Intro to projections and uncertainty](static/lectures/ssa200_06_intro-projections.pdf)  
+   
+[Occupancy projections](static/lectures/ssa200_07_occ-projection.pdf)  
+   
+[State transition models](static/lectures/ssa200_08_multistate-projection.pdf)   
   
-  
-  
-#### Presence-type data  
-  
-[lecture slides](static/lectures/ssa200_03_occ-data.pdf)  
-   
-   
-   
-#### Count data  
-  
-[lecture slides](static/lectures/ssa200_04_count-data.pdf)  
-   
-   
-   
-#### Demographic data  
-  
-[lecture slides](static/lectures/ssa200_05_demo-data.pdf)  
-   
-   
-   
-### Predicting future conditions  
-  
-  
-#### Intro to projections and uncertainty  
-  
-[lecture slides](static/lectures/ssa200_06_intro-projections.pdf)  
-   
-   
-   
-#### Occupancy projections  
-  
-[lecture slides](static/lectures/ssa200_07_occ-projection.pdf)  
-   
-   
-   
-
-#### State transition models  
-  
-[lecture slides](static/lectures/ssa200_08_multistate-projection.pdf)   
-   
-   
-   
-#### Count projections  
-  
-[lecture slides](static/lectures/ssa200_09_count-projection.pdf)  
+[Count projections](static/lectures/ssa200_09_count-projection.pdf)  
     
-    
-    
-#### Matrix models for population demographics  
-  
-[lecture slides](static/lectures/ssa200_10_demo-projection.pdf)    
+[Demographic PVA](static/lectures/ssa200_10_demo-projection.pdf)    
    
    
    
