@@ -6,15 +6,15 @@ output:
 
 __Assessing historic and current conditions__  
   
-[Intro to modeling for SSAs](static/lectures/ssa200_01_intro-models.pdf)  
+[Intro to modeling for SSAs](static/lectures/ssa200_lecture1_intro.pdf)  
   
-[Qualitative data](static/lectures/ssa200_02_qual-data.pdf)  
+[Qualitative data](static/lectures/ssa200_lecture2_descriptive-data.pdf)  
    
-[Presence-type data](static/lectures/ssa200_03_occ-data.pdf)  
+[Presence-type data](static/lectures/ssa200_lecture3_presence-data.pdf)  
    
-[Count data](static/lectures/ssa200_04_count-data.pdf)  
+[Count data](static/lectures/ssa200_lecture4_count-data.pdf)  
   
-[Demographic data](static/lectures/ssa200_05_demo-data.pdf)  
+[Demographic data](static/lectures/ssa200_lecture5_demographic-data.pdf)  
    
    
 __Predicting future conditions__  
