@@ -3,10 +3,7 @@ title: "Useful links and materials"
 ---
   
   
-__SSA 200 Supplemental Materials__  
-  
-[Supplemental materials](static/handouts/ssa200_supplemental-materials.pdf)
-  
+
   
 __Species Status Assessments__  
   

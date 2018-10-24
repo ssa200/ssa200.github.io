@@ -19,15 +19,13 @@ __Assessing historic and current conditions__
    
 __Predicting future conditions__  
   
-[Intro to projections and uncertainty](static/lectures/ssa200_06_intro-projections.pdf)  
+[Intro to projections and uncertainty](static/lectures/ssa200_lecture6_projections.pdf)  
    
-[Occupancy projections](static/lectures/ssa200_07_occ-projection.pdf)  
-   
-[State transition models](static/lectures/ssa200_08_multistate-projection.pdf)   
+[Occupancy and state transition projections](static/lectures/ssa200_lecture7_occ-multistate-projection.pdf)   
   
-[Count projections](static/lectures/ssa200_09_count-projection.pdf)  
+[Count projections](static/lectures/ssa200_lecture8_count-projection.pdf)  
     
-[Demographic PVA](static/lectures/ssa200_10_demo-projection.pdf)    
+[Demographic PVA](static/lectures/ssa200_lecture10_demographic-pva.pdf)    
    
    
    
