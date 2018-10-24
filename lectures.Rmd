@@ -25,7 +25,7 @@ __Predicting future conditions__
   
 [Count projections](static/lectures/ssa200_lecture8_count-projection.pdf)  
     
-[Demographic PVA](static/lectures/ssa200_lecture10_demographic-pva.pdf)    
+[Demographic PVA](static/lectures/ssa200_lecture9_demographic-pva.pdf)    
    
    
    
